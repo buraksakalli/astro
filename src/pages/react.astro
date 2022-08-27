@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/index.astro";
+import { Card } from "@components";
+
+const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+const posts = await res.json();
+---
+
+<Layout>
+  <section class="grid grid-cols-1 md:grid-cols-4 gap-2">
+    {posts.map((post) => <Card title={post.title} body={post.body} />)}
+  </section>
+</Layout>

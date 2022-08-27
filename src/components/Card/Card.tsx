@@ -8,7 +8,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ ...props }) => {
   return (
-    <div className="bg-slate-800 p-6 rounded-lg">
+    <div className="bg-slate-200 dark:bg-slate-900 p-6 rounded-lg">
       <time dateTime={"27-08-2022"} className="block text-sm text-slate-700">
         {format(parseISO(new Date().toISOString()), "LLLL d, yyyy")}
       </time>

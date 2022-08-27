@@ -1,0 +1,14 @@
+---
+import DarkMode from "../components/DarkMode/DarkMode.svelte";
+---
+
+<html lang="en">
+  <body class="bg-slate-100 dark:bg-slate-700">
+    <main class="m-4">
+      <div class="flex justify-end m-4">
+        <DarkMode client:visible />
+      </div>
+      <slot />
+    </main>
+  </body>
+</html>
