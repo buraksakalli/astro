@@ -1,0 +1,15 @@
+---
+const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+const posts = await res.json();
+import { Card } from "@components";
+---
+
+<html lang="en">
+	<body>
+		<main class="bg-slate-800">
+			<section class="grid grid-cols-1 md:grid-cols-4 gap-2">
+				{posts.map((post) => <Card title={post.title} body={post.body} />)}
+			</section>
+		</main>
+	</body>
+</html>
